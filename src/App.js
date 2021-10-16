@@ -46,7 +46,7 @@ function App() {
       />
       <Alert alert={alert} />
       {/* <Cards/> */}
-      <TextForm showAlert={showAlert} heading="Enter your text to analyze" />
+      <TextForm mode={mode} showAlert={showAlert} heading="Enter your text to analyze" />
     </>
   );
 }
