@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+# This is Text Utils Application
+
+In this project I use Bootstrap, React.js to create this type of web Application,
+When you run this application on your local host server, you can see the utilities of text,
+like to set the text to Upper Case, Lower Case, Clear text box and also it gives summary and with some basic reading calcuation
+
+Check this out 😉😉
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
