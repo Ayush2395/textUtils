@@ -4,14 +4,17 @@ export default function TextForm(props) {
   const upperCase = () => {
     let newText = text.toUpperCase();
     setText(newText);
+    props.showAlert('Upper case','success')
   };
   const lowerCase = () => {
     let newText = text.toLowerCase();
     setText(newText);
+    props.showAlert('Lower case','success')
   };
   const clearText = () => {
     let newText = "";
     setText(newText);
+    props.showAlert('Text Cleared','success')
   };
 
   const handleChange = (event) => {
