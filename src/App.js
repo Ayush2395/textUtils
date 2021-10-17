@@ -5,6 +5,8 @@ import NavBar from "./Components/NavBar";
 import TextForm from "./Components/TextForm";
 import React, { useState } from "react";
 import Alert from "./Components/Alert";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import About from "./Components/About";
 
 function App() {
   let myTitle = ["ayush", "neha", "priya", "bhanu", "textUtils", "About us"];
@@ -38,15 +40,29 @@ function App() {
 
   return (
     <>
-      <NavBar
-        toggleMode={toggleMode}
-        mode={mode}
-        brand={myTitle[4]}
-        aboutText={myTitle[5]}
-      />
-      <Alert alert={alert} />
-      {/* <Cards/> */}
-      <TextForm mode={mode} showAlert={showAlert} heading="Enter your text to analyze" />
+      <Router>
+        <NavBar
+          toggleMode={toggleMode}
+          mode={mode}
+          brand={myTitle[4]}
+          aboutText={myTitle[5]}
+        />
+        <Alert alert={alert} />
+        <div className="container">
+          <Switch>
+            <Route exact path="/">
+              <TextForm
+                mode={mode}
+                showAlert={showAlert}
+                heading="Enter your text to analyze"
+              />
+            </Route>
+            <Route exact path="/about">
+              <About />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
     </>
   );
 }
